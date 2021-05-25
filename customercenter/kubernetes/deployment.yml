@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: customercenter
+  namespace: mymall
   labels:
     app: customercenter
 spec:
@@ -16,7 +17,7 @@ spec:
     spec:
       containers:
         - name: customercenter
-          image: username/customercenter:latest
+          image: 985702435631.dkr.ecr.ap-northeast-2.amazonaws.com/customercenter:latest
           ports:
             - containerPort: 8080
           readinessProbe:
